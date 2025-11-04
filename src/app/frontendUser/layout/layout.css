@@ -1,0 +1,14 @@
+.navbar-nav .nav-link:hover {
+  color: #ffd700 !important; /* Golden hover */
+}
+
+.navbar-brand:hover {
+  color: #fffacd !important;
+}
+/* banner.css */
+.banner {
+  background: url('https://via.placeholder.com/1500x400') center/cover no-repeat;
+  color: rgb(11, 103, 63);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+

@@ -1,0 +1,31 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <div class="auth-header">
+      <h2>Create Account</h2>
+      <p>Sign up to start your shopping journey</p>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" [(ngModel)]="customer.name" name="name"/>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="text" placeholder="Enter your mobile number" name="mobile" [(ngModel)]="customer.mobileNo"/>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Create a password" name="password" [(ngModel)]="customer.password" />
+      </div>
+
+      <button type="submit" class="btn-submit" (click) = "register()">Register</button>
+
+      <p class="auth-footer">
+        Already have an account? <a (click)="login()">Login</a>
+      </p>
+    </form>
+  </div>
+</div>

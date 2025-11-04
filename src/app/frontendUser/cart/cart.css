@@ -1,0 +1,95 @@
+/* Bestseller Header */
+.bestseller-header {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.bestseller-header h1 {
+  font-size: 3rem;
+  color: #27ae60;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.bestseller-header p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Product Cards */
+.product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.product-name:hover {
+  color: #27ae60;
+}
+
+.btn-outline-primary {
+  border: 1px solid #27ae60;
+  color: #27ae60;
+}
+
+.btn-outline-primary:hover {
+  background-color: #27ae60;
+  color: white;
+}
+.buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.buttons button {
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+/* Clear cart button (outline style) */
+.btn-clear {
+  background-color: red;
+  color: white;
+  border: 2px solid #27ae60;
+}
+
+.btn-clear:hover {
+  background-color: #db3333;
+  color: #fff;
+}
+
+/* Place order button (filled green) */
+.btn-order {
+  background-color: #27ae60;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}
+
+.btn-order:hover {
+  background-color: #219150;
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+}

@@ -1,0 +1,66 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand text-white fw-bold" (click)="goHome()">
+      <i class="fa fa-shopping-basket me-2"></i>MyShop
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link text-white" (click)="goHome()">Home</a>
+        </li>
+
+        <!-- Categories dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let cat of categoryList" name="catList" (click)="getCategoryList(cat.categoryId)"><a class="dropdown-item" name="catList" >{{cat.categoryName}}</a></li>
+          </ul>
+        </li>
+
+        <!-- Cart -->
+        <li class="nav-item" routerLink="/cart">
+          <a class="nav-link text-white" >
+            <i class="fa fa-shopping-cart"></i> Cart
+          </a>
+        </li>
+
+        <!-- Orders -->
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Orders</a>
+        </li>
+
+        <!-- User profile dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fa fa-user-circle"></i> User
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<router-outlet></router-outlet>

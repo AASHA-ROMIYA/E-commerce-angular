@@ -1,0 +1,32 @@
+
+<div class="container my-5">
+  <div class="row g-4">
+    <div class="col-lg-6 col-xl-4" *ngFor="let product of cartList">
+      <div class="product-card p-4 rounded bg-light">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <img [src]="product.productImageUrl" class="img-fluid rounded-circle w-100" style="width:130px;height:150px">
+          </div>
+          <div class="col-6">
+            <a href="#" class="product-name">{{product.productName}}</a>
+            <div class="d-flex my-3">
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star "></i>
+            </div>
+            <h4 class="mb-4"> 1 x {{product.productPrice}} $</h4>
+            <button class="btn btn-outline-primary rounded-pill px-3" (click)="removeProduct(product.cartId)">
+              <i class="fa fa-shopping-bag me-2"></i>Remove 
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="buttons">
+  <button class="btn-clear" (click)="removeCartProduct()">Clear Cart</button>
+  <button class="btn-order" (click)="placeOrder()">Place Order</button>
+</div>
