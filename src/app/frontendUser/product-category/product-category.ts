@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product-category.css',
 })
 export class ProductCategory implements OnInit {
-  activatedId=0;
+   activatedId=0;
    productList:any[]=[];
    custId=0;
   constructor(private activateroute:ActivatedRoute,private productService:ProductService){
